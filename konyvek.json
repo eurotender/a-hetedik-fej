@@ -5,6 +5,7 @@
       "id": "hetedik",
       "sorszam": 1,
       "cim": "A hetedik fej",
+      "leiras": "Hat sárkányfej alszik az iskola pincéje alatt. A hetedik hiányzik.",
       "fajl": "konyvek/a-hetedik-fej.html",
       "allapot": "kesz",
       "vegek": 6,
@@ -14,6 +15,7 @@
       "id": "iskola",
       "sorszam": 2,
       "cim": "Müzli iskolába megy",
+      "leiras": "Müzli feje beszáll a táskádba, és veled tölti a tanítási napot.",
       "fajl": "konyvek/muzli-iskolaba-megy.html",
       "allapot": "kesz",
       "vegek": 6,
@@ -22,8 +24,9 @@
     {
       "id": "per",
       "sorszam": 3,
-      "cim": "A második fej pere",
-      "fajl": "konyvek/a-masodik-fej-pere.html",
+      "cim": "A második fej nem hiszi el",
+      "leiras": "A második fej azt mondja, hogy nincs iskola. Bizonyítsd be, hogy van.",
+      "fajl": "konyvek/a-masodik-fej-nem-hiszi-el.html",
       "allapot": "kesz",
       "vegek": 6,
       "nyomok": 32
