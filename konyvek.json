@@ -42,9 +42,23 @@
       "nyomok": 31
     },
     {
-      "id": "otodik",
+      "id": "csuklik",
       "sorszam": 5,
-      "cim": "Az ötödik könyv",
+      "cim": "A negyedik fej csuklik",
+      "leiras": "Most készül.",
+      "allapot": "keszul"
+    },
+    {
+      "id": "nema",
+      "sorszam": 6,
+      "cim": "Az ötödik fej nem beszél",
+      "leiras": "Most készül.",
+      "allapot": "keszul"
+    },
+    {
+      "id": "szabaly",
+      "sorszam": 7,
+      "cim": "A hatodik fej szabálya",
       "leiras": "Most készül.",
       "allapot": "keszul"
     }
