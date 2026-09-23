@@ -18,15 +18,11 @@ body{margin:0;background:var(--papir);color:var(--tinta);
   padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 .keret{max-width:34rem;margin:0 auto;padding:28px 18px 56px}
 
-header{margin-bottom:26px}
+header{margin-bottom:30px}
 .jel{font-size:clamp(15px,3.8vw,17px);font-weight:700;color:var(--zold);
   letter-spacing:.08em;margin:0 0 6px}
 h1{font-size:clamp(34px,10vw,50px);line-height:1.02;margin:0 0 10px;font-weight:700}
 .alcim{color:var(--halk);margin:0;font-size:clamp(16px,4vw,18px)}
-
-.osszes{background:var(--lap);border:2px solid var(--vonal);border-radius:14px;
-  padding:14px 16px;margin:22px 0 26px;font-size:clamp(16px,4vw,18px)}
-.osszes b{color:var(--zold)}
 
 .konyv{background:var(--lap);border:2px solid var(--vonal);border-radius:16px;
   padding:18px;margin:0 0 16px;display:block;text-decoration:none;color:inherit}
@@ -67,7 +63,6 @@ footer button{font:inherit;font-size:14px;background:none;border:0;color:var(--h
     <h1>Lapozgatós kalandkönyvek</h1>
     <p class="alcim">Te döntöd el, mi történik. Minden könyvben több befejezés van, és rengeteg elrejtett nyom.</p>
   </header>
-  <div id="osszes" class="osszes" hidden></div>
   <main id="lista"></main>
   <footer>
     <p id="labjegyzet">A haladásod ezen a készüléken marad meg.</p>
@@ -148,21 +143,6 @@ function rajzol(adat){
   const konyvek = (adat.konyvek || []).slice()
       .sort((a,b)=>(a.sorszam||99)-(b.sorszam||99));
   konyvek.forEach(k => lista.appendChild(kartya(k)));
-
-  let v=0, vo=0, n=0, no=0, kesz=0;
-  konyvek.forEach(k=>{
-    if(k.allapot === "keszul" || !k.fajl) return;
-    kesz++;
-    const h = olvasHaladas(k.id);
-    v += h.veg.length;  vo += (k.vegek||0);
-    n += h.nyom.length; no += (k.nyomok||0);
-  });
-  if(kesz){
-    const o = document.getElementById("osszes");
-    o.hidden = false;
-    o.innerHTML = "Eddig <b>" + v + "</b> befejezést találtál meg a " + vo +
-                  "-ból, és <b>" + n + "</b> nyomot a " + no + "-ból.";
-  }
 }
 
 fetch("konyvek.json", {cache:"no-cache"})
