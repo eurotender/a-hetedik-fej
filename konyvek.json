@@ -32,9 +32,19 @@
       "nyomok": 32
     },
     {
-      "id": "negyedik",
+      "id": "ehes",
       "sorszam": 4,
-      "cim": "A negyedik könyv",
+      "cim": "A harmadik fej éhes",
+      "leiras": "A harmadik fej megéhezett, és az egész iskola konyhája kevés neki.",
+      "fajl": "konyvek/a-harmadik-fej-ehes.html",
+      "allapot": "kesz",
+      "vegek": 6,
+      "nyomok": 31
+    },
+    {
+      "id": "otodik",
+      "sorszam": 5,
+      "cim": "Az ötödik könyv",
       "leiras": "Most készül.",
       "allapot": "keszul"
     }
