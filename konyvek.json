@@ -45,8 +45,11 @@
       "id": "csuklik",
       "sorszam": 5,
       "cim": "A negyedik fej csuklik",
-      "leiras": "Most készül.",
-      "allapot": "keszul"
+      "leiras": "A negyedik fej csuklani kezd, és minden csuklásnál láng csap ki a száján.",
+      "allapot": "kesz",
+      "fajl": "konyvek/a-negyedik-fej-csuklik.html",
+      "vegek": 6,
+      "nyomok": 33
     },
     {
       "id": "nema",
