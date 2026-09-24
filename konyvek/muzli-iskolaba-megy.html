@@ -53,6 +53,7 @@ try{ const m = localStorage.getItem(KULCS_NY); if(m) nyomok = new Set(JSON.parse
    Ez a blokk a régi, szöveg alapú mentést veszi át egyszer. Később
    nyugodtan törölhető. -------------------------------------------------- */
 const NYID = new Set(NYOMOK.map(x=>x[0]));
+const NYCIM = new Map(NYOMOK);
 const VEGID = new Set(VEGEK.map(x=>x[0]));
 const ATNEVEZES = { /* régi felirat: nyom azonosítója */
   "Feri bácsi dúdolása": "n01"
@@ -81,7 +82,6 @@ function cimlap(){
   lap.appendChild(el("div","sorozat","MÁSODIK KÖNYV"));
   const h=el("h1","cim"); h.innerHTML="Müzli<br>iskolába<br>megy"; lap.appendChild(h);
   if(KEPEK[1]){ const im=document.createElement("img"); im.className="kep"; im.src=KEPEK[1]; im.alt=""; lap.appendChild(im); }
-  lap.appendChild(el("p","alcim","Te döntöd el, mi történik. Hat befejezés van, és huszonhat nyom."));
   const v=el("div","valasztek");
   const a=el("button","gomb fo","Kezdjük!"); a.onclick=()=>mutat(1); v.appendChild(a);
   const b=el("button","gomb","Befejezések ("+talalt.size+"/"+VEGEK.length+")"); b.onclick=gyujtemeny; v.appendChild(b);
@@ -132,7 +132,7 @@ function mutat(sz){
   if(o.ny){
     const ujE = !nyomok.has(o.ny);
     nyomok.add(o.ny); ment();
-    lap.appendChild(el("p","nyomjel",(ujE?"Új nyom: ":"Nyom: ")+o.ny));
+    lap.appendChild(el("p","nyomjel",(ujE?"Új nyom: ":"Nyom: ")+(NYCIM.get(o.ny)||o.ny)));
   }
   const v=el("div","valasztek");
   if(o.b){
