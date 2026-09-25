@@ -55,8 +55,11 @@
       "id": "nema",
       "sorszam": 6,
       "cim": "Az ötödik fej nem beszél",
-      "leiras": "Most készül.",
-      "allapot": "keszul"
+      "leiras": "Az ötödik fej soha nem szólal meg. De kopog, és a kopogás jelent valamit.",
+      "allapot": "kesz",
+      "fajl": "konyvek/az-otodik-fej-nem-beszel.html",
+      "vegek": 6,
+      "nyomok": 36
     },
     {
       "id": "szabaly",
